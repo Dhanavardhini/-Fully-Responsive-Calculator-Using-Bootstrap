@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cal-crt</title>
+    <link rel="stylesheet" href="./../../bootstrap-1/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         body{
+            animation-name: box;
+            animation-duration: 5s;
+            animation-delay: 3s;
+            animation-iteration-count: infinite;
+         }
+         @keyframes box{
+            0%{
+                background-color: violet;
+                transform: rotate(2.deg);
+            }
+            5%{
+                background-color: rgba(255, 255, 0, 0.734);
+                transform: rotate(2.deg);
+            }
+            25%{
+                background-color: rgba(255, 0, 140, 0.8);
+                transform: rotate(2.deg);
+            }
+            55%{
+                background-color: rgba(0, 255, 85, 0.797);
+                transform: rotate(2.deg);
+            }
+            75%{
+                background: radial-gradient(#ff660092,rgba(141, 225, 5, 0.606),rgba(1, 25, 62, 0.635));
+        
+                transform: rotate(2.deg);
+            }
+            100%{
+                background-color: rgba(255, 149, 0, 0.767);
+                transform: rotate(2.deg);
+                transform: skew(60 deg);
+            }
+         }
+
+        .d2:hover {
+             cursor:grab;
+             transform: scale(.8);
+        }
+        
+        #d4:hover{
+           cursor:pointer;
+           transform: scale(.9);
+        }
+        #d6:hover{
+           cursor:pointer;
+           transform: scale(.9);
+
+        }
+        #d4::placeholder{
+            color: blue;
+        }
+        #d6::placeholder{
+            color: blue;
+        }
+        .plus{
+            color: green;
+            padding: 3px;
+            font-size: 20px;
+            
+        }
+        .multi{
+            color: green;
+            padding: 3px;
+            font-size: 20px;
+        }
+        .min{
+            color: green;
+            padding: 3px;
+            font-size: 20px;
+        }
+        .divide{
+            color: green;
+            padding: 3px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dhana container d-flex justify-content-center " >
+
+        <div class="div mt-5 " style=" height: 450px; width: 430px;outline: none;box-shadow:3px 8px 25px 10px grey;background-color:rgb(11, 226, 241); border-radius: 18px;">
+        <!-- ------------------------ -->
+
+<div class="ammu row  " >
+
+<div class="d2 display-6 fw-bold d-flex justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-4 mb-5"style="text-shadow:8px 4px 8px #F5004F;color:#F5004F;font-family:'Times New Roman', Times, serif;">
+CALCULATER</div>
+
+</div>
+<!-- ----------------------------------- -->
+
+<div class="ammu1 row ">
+
+<div class="d3 col-sm-11 col-md-11 col-lg-12 col-xl-12 col-xxl-12 d-flex justify-content-center  mb-5">
+    <input type="number" placeholder="Enter Your Number" id="d4"style="padding:8px; width: 300px;border:none;border-radius:8px;font-size:16px;outline:grey; font-family:'Times New Roman', Times, serif;" class="text-center">
+</div>
+</div>
+<!-- --------------------------------- -->
+
+<div class="ammu2 row ">
+
+<div class="d5 col-sm-11 col-md-11 col-lg-12 col-xl-12 col-xxl-12 mb-5 d-flex justify-content-center">
+    <input type="number" placeholder="Enter Your Number" id="d6" style="padding:8px; width: 300px;border:none;border-radius:8px; font-size:16px;font-family:'Times New Roman', Times, serif;" class="text-center" >
+</div>
+</div>
+<!-- ------------------------------------ -->
+
+<div class="ammu3 row ">
+
+<div class="sd col-sm-11 col-md-12 col-lg-12 col-xl-12 col-xxl-12  d-flex justify-content-evenly" >
+    <div class="div">
+<button onclick="add()" style="border: none;border-radius: 4px;"><i class="fa-solid fa-plus plus "></i></button>
+<div id="d8" class="text-danger fw-bold"></div>
+</div>
+
+<div class="div">
+<button onclick="multi()" style="border: none;border-radius: 4px;"><i class="fa-solid fa-xmark multi"></i></button>
+<div id="d9" class="text-danger fw-bold"></div>
+
+</div>
+
+<div class="div">
+<button onclick="min()" style="border: none; border-radius: 4px;">
+<i class="fa-solid fa-minus min"></i></button>
+<div id="d10" class="text-danger fw-bold"></div>
+
+</div>
+
+<div class="div">
+<button  onclick="divide()" style="border: none; border-radius: 4px;">
+<i class="fa-solid fa-divide divide"></i></button>
+<div id="d11" class="text-danger fw-bold"></div>
+
+</div>
+
+<div class="div">
+<button onclick="remove()" id="d7" style="font-family:'Times New Roman', Times, serif; color:green;border: none; font-size: 20px;border-radius: 4px; " >Clear</button>
+</div>
+
+
+</div>
+</div>
+<!-- ------------------------------------------- -->
+
+<div class="ammu4 row ">
+
+<div class="sd1 d-flex justify-content-evenly col-sm-8 col-md-10 col-lg-12 col-xl-12 col-xxl-12 " style="color: #821131; font-size: large; font-family:'Times New Roman', Times, serif;" >
+
+
+</div>
+</div>
+<!-- ----------------------------------- -->
+</div>
+</div>
+
+ <script src="./calculate.js"></script>
+</body>
+</html>     
